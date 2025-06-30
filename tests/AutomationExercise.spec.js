@@ -4,10 +4,13 @@ import { LoginPage } from "../Pages/Login"
 
 import { FromFillupPage } from "../Pages/FromFillup"
 
+import { AddToCartPage } from "../Pages/AddToCartPage"
+
 test("test" , async ({page}) =>{
 
     const lp = new LoginPage(page)
     const ffp = new FromFillupPage(page)
+    const adtcrt = new AddToCartPage(page)
 
     await lp.openUrl("https://www.automationexercise.com/")
 
@@ -21,4 +24,6 @@ test("test" , async ({page}) =>{
     console.log("The visible text is :" + await visibleText.textContent())
 
     await ffp.setAccountInfo()
+
+    await adtcrt.adddToCartProduct()
 })

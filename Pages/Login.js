@@ -11,7 +11,7 @@ exports.LoginPage = class Login{
 
     async openUrl(url){
         await this.page.goto(url)
-        await this.page.waitForTimeout(3000); 
+        await this.page.waitForTimeout(1000); 
     }
 
     async signUp(name, mail){
